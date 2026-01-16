@@ -109,25 +109,52 @@ body {
   margin-bottom: 25px;
 }
 
-table {
-  width: 100%;
-  border-collapse: collapse;
+/*=========table css============ */
+.specs table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+}
+.heading-of-specs {
+    background: #0b5ed7;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    text-align: left;
+    padding: 10px 12px;
+}
+.specs th,
+.specs td {
+    padding: 8px 12px;
+    font-size: 14px;
+    text-align: left;
+    vertical-align: middle;
 }
 
-th, td {
-  padding: 12px;
-  border-bottom: 1px solid #ddd;
-  text-align: left;
+.specs tbody th {
+    font-weight: 500;
+    color: #333;
+    width: 55%;
 }
-#headings{
-  text-align: center;
-  font-size: 1.2rem;
-  padding-top: 20px;
+
+.specs tbody td {
+    color: #555;
+    width: 45%;
 }
-th {
-  color: #003366;
-  width: 40%;
+.specs tbody tr:nth-child(even) {
+    background: #f9f9f9;
 }
+@media (max-width: 480px) {
+    .specs th,
+    .specs td {
+        font-size: 13px;
+        padding: 7px 10px;
+    }
+}
+
 
 /* ========== ENQUIRY FORM SECTION ========== */
 .enquiry {
@@ -175,8 +202,9 @@ button:hover {
 /* ========== RESPONSIVE DESIGN ========== */
 @media (max-width: 768px) {
   .hero {
-    flex-direction: column;
-    text-align: center;
+    /* flex-direction: column; */
+    /* text-align: center; */
+    text-wrap: wrap;
   }
   .hero-content {
     max-width: 100%;
