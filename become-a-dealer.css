@@ -1,0 +1,130 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-image: url("images/world-map-people-shaking-hands-600nw-2650176451.webp");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  background-repeat: no-repeat;
+}
+
+.form-of-becoming-dealer {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  /* justify-content: center; */
+  /* align-items: center; */
+}
+
+.form-of-becoming-dealer input,
+.form-of-becoming-dealer textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  -webkit-background-opacity: 0.8;
+}
+
+.form-of-becoming-dealer input:focus,
+.form-of-becoming-dealer textarea:focus {
+  border-color: #2563eb;
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.15);
+}
+
+.btn {
+  background-color: #ffcc00;
+  color: #003366;
+  font-weight: 600;
+  padding: 12px 25px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: all background-color 0.3s;
+  border: none;
+  margin: auto auto;
+  justify-self: center;
+  display: block;
+  max-width: 250px;
+  width: 100%;
+}
+
+.btn:hover {
+  background-color: #ffd633;
+  transform: translateY(-2px);
+  box-shadow: 0 15px 30px rgba(255, 204, 0, 0.4);
+}
+
+.benefit {
+  margin: 1rem auto;
+  padding: 10px;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(120px, 1fr));
+  grid-template-areas:
+    "title title title title"
+    "image1 image2 image3 image4";
+  justify-items: center;
+  gap: 20px;
+  background-color: #fff;
+
+}
+
+.benefit h1 {
+  font-family: 'Times New Roman', Times, serif;
+  background: linear-gradient(45deg, #1D4ED8, #F97316);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  width: fit-content;
+  box-sizing: border-box;
+  padding: 5px;
+  border-radius: 5px;
+  align-self: self-start;
+  justify-self: self-start;
+  grid-area: title;
+}
+
+.ben-image1 {
+  grid-area: image1;
+}
+
+.ben-image2 {
+  grid-area: image2;
+}
+
+.ben-image3 {
+  grid-area: image3;
+}
+
+.ben-image4 {
+  grid-area: image4;
+}
+
+.benefit h4 {
+  text-align: center;
+}
+
+.benefit small {
+  text-align: center;
+  display: block;
+}
+
+@media screen and (max-width: 900px) {
+  .benefit {
+    grid-template-columns: repeat(2, minmax(120px, 1fr));
+    grid-template-areas:
+      "title title"
+      "image1 image2"
+      "image3 image4";
+  }
+}
